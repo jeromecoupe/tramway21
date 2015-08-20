@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+
+    {% if page.home == false %}
+      {% include header.html %}
+    {% endif %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+
+    <!-- All scripts -->
+    <script src="./js/dist/all.js"></script>
+  </body>
+
+</html>

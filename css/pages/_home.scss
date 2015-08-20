@@ -1,0 +1,68 @@
+/* ==================================
+=motto
+================================== */
+
+.motto
+{
+  margin-top: calc-em(40px);
+  margin-bottom: calc-em(40px);
+
+  @include mq(medium)
+  {
+    margin-top: calc-em(80px);
+    margin-bottom: calc-em(80px);
+  }
+
+  @include mq(large)
+  {
+    margin-top: calc-em(160px);
+    margin-bottom: calc-em(160px);
+  }
+}
+
+.motto__img
+{
+  margin: 0;
+  padding: 0;
+
+  @include mq(medium)
+  {
+    float: left;
+    margin-right: 1.5em;
+  }
+}
+
+.motto__body
+{
+  overflow: hidden;
+}
+
+.motto__txt
+{
+  margin: 0;
+  padding: 0;
+  margin-top: 1em;
+
+  font-weight: 400;
+  font-family: $fontstack-alt;
+  @include rem-size(21px);
+  line-height: 1.25;
+
+  @include mq(small)
+  {
+    @include rem-size(25px);
+    font-weight: 400;
+  }
+
+  @include mq(medium)
+  {
+    margin-top: 0.4em;
+    @include rem-size(34px);
+    line-height: 1.15;
+  }
+
+  @include mq(large)
+  {
+    @include rem-size(38px);
+  }
+}

@@ -1,0 +1,92 @@
+/* ==================================
+=typography
+================================== */
+
+/**
+ * REM sized font-size based on PX values
+ * PX fallback
+*/
+
+@mixin rem-size($sizeinpixels, $basefont: 16px)
+{
+  font-size: $sizeinpixels;
+  font-size: $sizeinpixels / $basefont * 1rem;
+}
+
+/**
+ * Base styles for bare lists
+*/
+
+@mixin list-bare()
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==================================
+=media queries
+================================== */
+
+/**
+ *
+ * Default map for media queries
+ *
+ * Usage
+ * - used by media queries mixin
+ *
+ * Nested Lists
+ * - first map: names as keys
+ * - nested map: parameters
+ *   - query: full media query
+ *   - generate-grid-classes: boolean. Turns grid classes generation on / off for a given media query
+ *
+ * Default dimensions
+ * Can and should be overrriden in _variables.scss
+ *
+ * - small: 	500px	  31.25em
+ * - medium: 	760px	  47.5em
+ * - large: 	1024px	64em
+ * - xlarge: 	1140px	71.25em
+ */
+
+$mq-list: (
+ "small": (
+   query: "all and (min-width: 31.25em)",
+   generate-grid-classes: false
+ ),
+ "medium": (
+   query: "all and (min-width: 47.5em)",
+   generate-grid-classes: false
+ ),
+ "large": (
+   query: "all and (min-width: 64em)",
+   generate-grid-classes: false
+ ),
+ "xlarge": (
+   query: "all and (min-width: 71.25em)",
+   generate-grid-classes: false
+ )
+) !default;
+
+
+/**
+ * Generate media query based on passed breakpoint
+ * Passed breakpoint must be a key in $mq-list
+ */
+
+@mixin mq($breakpoint)
+{
+  @if map-has-key($mq-list, $breakpoint)
+  {
+    $mqparams: map-get($mq-list, $breakpoint);
+
+    @media #{map-get($mqparams, query)} {
+      @content;
+    }
+  }
+  @else
+  {
+    @warn "Breakpoint #{$breakpoint} is not defined in $mq-list";
+  }
+}

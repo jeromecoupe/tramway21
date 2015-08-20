@@ -1,0 +1,14 @@
+# Site settings
+title: Tramway21
+email: jerome.coupe@webstoemp.com
+description: "Tramway 21: marketing and communication for social good."
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.tramway21.dev" # the base hostname & protocol for your site
+twitter_username: jeromecoupe
+github_username:  jeromecoupe
+
+# Build settings
+markdown: kramdown
+
+# Exclude
+exclude: [node_modules, gulpfile.js, package.json, README.md]

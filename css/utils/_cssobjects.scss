@@ -1,0 +1,116 @@
+/* ==================================
+=media object
+================================== */
+
+.mediaobject
+{
+	@extend %clearfix;
+}
+
+	.mediaobject__img
+	{
+		margin: 0;
+		padding: 0;
+		margin-right: 1em;
+		float: left;
+
+		& img, & svg
+		{
+			display: block;
+		}
+	}
+
+	.mediaobject__body
+	{
+		overflow: hidden;
+	}
+
+/* gutter variations */
+
+.mediaobject--gutterbig > .mediaobject__img
+{
+	margin-right: 2em
+}
+
+/*------------------------------------*\
+=flag object
+\*------------------------------------*/
+
+/**
+ * CSS Wizardry flag object
+ * <http://csswizardry.com/2013/05/the-flag-object/>
+ *
+ * - .flagobject--top, .flagobject--bottom as vertical alignment variants
+ * - .flagobject--gutter-small to reduce the with of the gutter
+ */
+
+.flagobject
+{
+	width: 100%;
+	display: table;
+}
+
+.flagobject__img, .flagobject__body
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.flagobject__img
+{
+	margin: 0;
+	padding: 0;
+	padding-right: 0.75em;
+
+	& img, & svg
+	{
+		display: block;
+		max-width: none;
+	}
+}
+
+.flagobject__body
+{
+	width: 100%;
+}
+
+/**
+ * Top aligned variant
+ */
+
+.flagobject--top > .flagobject__img, .flagobject--top > .flagobject__body
+{
+	vertical-align: top;
+}
+
+/**
+ * Bottom aligned variant
+ */
+
+.flagobject--bottom > .flagobject__img, .flagobject--bottom > .flagobject__body
+{
+	vertical-align: bottom;
+}
+
+/**
+ * Small gutter variant
+ */
+
+.flagobject--gutter-small > .flagobject__img
+{
+	padding-right: 0.5em;
+}
+
+/**
+ * Reverse variant
+ */
+
+.flagobject--reverse
+{
+	direction: rtl;
+
+	&  > .flagobject__img
+	{
+		padding-left: 1em;
+	}
+}

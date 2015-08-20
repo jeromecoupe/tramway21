@@ -1,0 +1,14 @@
+# Jekyll generated site
+# ---------------------------
+_site/**/*
+
+# NPM Modules & Sass cache
+# ---------------------------
+node_modules/**/*
+.sass-cache/**/*
+
+# Misc files
+# ---------------------------
+.DS_Store
+Thumbs.db
+*.sublime-project

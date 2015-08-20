@@ -1,0 +1,48 @@
+/* ==================================
+=list helpers
+================================== */
+
+/**
+ * Strip lists of list attributes
+*/
+
+.list-bare
+{
+  @include list-bare();
+}
+
+/**
+ * list with spacing between li
+ * - spacing variations
+*/
+
+.list-vspace
+{
+  @include list-bare();
+
+  & > li
+  {
+    margin-bottom: 1em;
+
+    &:last-child
+    {
+      margin-bottom: 0;
+    }
+  }
+
+  // spacing variations
+  &--small > li
+  {
+    margin-bottom: 0.75em;
+  }
+
+  &--medium > li
+  {
+    margin-bottom: 2.11em;
+  }
+
+  &--large > li
+  {
+    margin-bottom: 2.813em;
+  }
+}

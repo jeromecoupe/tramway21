@@ -1,0 +1,30 @@
+/* ==================================
+=clearfix
+================================== */
+
+.clearfix:after,
+%clearfix:after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* ==================================
+=hide
+================================== */
+
+%visuallyhidden, .visuallyhidden
+{
+	position:absolute;
+	top:0;
+	left:-9999px;
+	overflow:hidden;
+}
+
+%offleft, .offleft
+{
+	text-indent: -9999px;
+	overflow: hidden;
+}

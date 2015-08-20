@@ -1,0 +1,56 @@
+/* ==================================
+=main layout
+================================== */
+
+/*
+ * Layered layout mechanism
+ * - everythng is in a 100% wide block (colors)
+ * - .container manages max-width and center things
+ *
+ * Grids are handled in layout/_grid.scss
+**/
+
+.container
+{
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 960px;
+
+  @include mq(large)
+  {
+    padding-left: percentage(90/1140);
+    padding-right: percentage(90/1140);
+  }
+}
+
+/*
+ * Page modules
+ *
+ * - handles vertical spacing
+ * - background color variations
+ *
+**/
+
+.pagemodule
+{
+  padding-top: calc-em(60px);
+  padding-bottom: calc-em(60px);
+
+  @include mq(medium)
+  {
+    padding-top: calc-em(100px);
+    padding-bottom: calc-em(100px);
+  }
+
+  @include mq(large)
+  {
+    padding-top: calc-em(120px);
+    padding-bottom: calc-em(120px);
+  }
+}
+
+.pagemodule--highlight
+{
+  background-color: $color-main1;
+}

@@ -1,0 +1,12 @@
+/* ==================================
+=dimensions in EM based on PX
+================================== */
+
+/**
+ * Mainly used for vertical spacing
+*/
+
+@function calc-em($sizeinpixels, $basefont: 16px)
+{
+  @return $sizeinpixels / $basefont * 1em;
+}
