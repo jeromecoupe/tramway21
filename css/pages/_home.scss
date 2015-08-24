@@ -4,12 +4,15 @@
 
 .motto
 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
   margin-top: calc-em(40px);
   margin-bottom: calc-em(40px);
 
   @include mq(medium)
   {
-    display: flex;
     flex-direction: row;
     align-items: center;
 
@@ -28,11 +31,28 @@
 {
   margin: 0 1em 0 0;
   padding: 0;
+
+  // fallback for non flzxbox browsers
+  @include mq(medium)
+  {
+    float:left;
+  }
+
 }
 
 .motto__body
 {
   flex: 1;
+  margin-top: calc-em(22px);
+
+  // fallback for non flexbox browsers
+  overflow: hidden;
+
+  @include mq(medium)
+  {
+    margin-top: 0;
+  }
+
 }
 
 .motto__txt
