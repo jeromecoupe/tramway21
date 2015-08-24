@@ -1141,14 +1141,16 @@ body {
    * Variant when needs to overlay a picture / previous block
   */
 .container--overlay {
-  padding-top: 80px;
+  padding-top: 60px;
   margin-top: -120px;
   z-index: 50; }
   @media all and (min-width: 47.5em) {
     .container--overlay {
+      padding-top: 80px;
       margin-top: -10em; } }
   @media all and (min-width: 64em) {
     .container--overlay {
+      padding-top: 100px;
       margin-top: -11.25em; } }
 
 .container--highlight {
@@ -1216,18 +1218,16 @@ body {
 ================================== */
 a {
   color: #00ABE7;
-  text-decoration: none;
-  transition: color 0.2s linear; }
+  text-decoration: none; }
   a:hover {
-    color: #067BC2;
-    text-decoration: none; }
+    color: #00ABE7;
+    text-decoration: underline; }
 
 /* ==================================
 =block links
 ================================== */
 .blocklink, .blocklink:hover {
-  text-decoration: none;
-  border: none; }
+  text-decoration: none; }
 
 /* ==================================
 =list helpers
