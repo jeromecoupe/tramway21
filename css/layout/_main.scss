@@ -24,6 +24,31 @@
   }
 }
 
+  /**
+   * Variant when needs to overlay a picture / previous block
+  */
+  .container--overlay
+  {
+    padding-top: 80px;
+    margin-top: -120px;
+    z-index: 50;
+
+    @include mq(medium)
+    {
+      margin-top: calc-em(-160px);
+    }
+
+    @include mq(large)
+    {
+      margin-top: calc-em(-180px);
+    }
+  }
+
+  .container--highlight
+  {
+    background: $color-main1;
+  }
+
 /*
  * Content modules
  *
