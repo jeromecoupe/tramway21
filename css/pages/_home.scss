@@ -82,3 +82,42 @@
     @include rem-size(38px);
   }
 }
+
+/* ==================================
+=teams
+================================== */
+
+/**
+ * Manages spacing and backgrounds for both teams
+*/
+
+.team
+{
+  margin-top: calc-em(40px);
+
+  @include mq(medium)
+  {
+    margin-top: calc-em(60px);
+  }
+
+  @include mq(large)
+  {
+    margin-top: calc-em(80px);
+  }
+}
+
+.team--internal
+{
+  padding-bottom: 100px;
+  background: url(../../img/bkg_plus.svg) bottom center no-repeat;
+
+  @include mq(medium)
+  {
+    padding-bottom: calc-em(120px);
+  }
+
+  @include mq(large)
+  {
+    padding-bottom: calc-em(120px);
+  }
+}

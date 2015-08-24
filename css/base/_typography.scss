@@ -62,6 +62,11 @@ body
     color: $color-main1;
   }
 
+  .h1--bm
+  {
+    margin-bottom: 1.25em;
+  }
+
 
 .h2
 {
@@ -121,9 +126,9 @@ body
 
 .suptitle
 {
-  margin-bottom: 0.15em;
+  margin-bottom: 0.5em;
   font-family: $fontstack-alt;
-  @include rem-size(18px);
+  @include rem-size(16px);
   font-weight: 600;
   font-style: italic;
   text-transform: uppercase;

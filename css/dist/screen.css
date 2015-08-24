@@ -147,6 +147,9 @@ body {
 .h1--highlight {
   color: #FFED00; }
 
+.h1--bm {
+  margin-bottom: 1.25em; }
+
 .h2 {
   margin-bottom: 1em;
   font-size: 23px;
@@ -187,10 +190,10 @@ body {
 /* =custom titles
 ================================== */
 .suptitle {
-  margin-bottom: 0.15em;
+  margin-bottom: 0.5em;
   font-family: "bookmania", Georgia, Times, serif;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   font-style: italic;
   text-transform: uppercase;
@@ -1182,21 +1185,6 @@ body {
   background-color: #2F2F2F;
   color: #9D9D9D; }
 
-/**
-   * content submodules
-   *
-   * used to create vertical whitespace when various content blocks are used
-   * in one module
-  */
-.contentsubmodule + .contentsubmodule {
-  margin-top: 2.5em; }
-  @media all and (min-width: 47.5em) {
-    .contentsubmodule + .contentsubmodule {
-      margin-top: 3.75em; } }
-  @media all and (min-width: 64em) {
-    .contentsubmodule + .contentsubmodule {
-      margin-top: 5em; } }
-
 .pagefooter {
   padding-top: 3.75em;
   padding-bottom: 3.75em; }
@@ -1266,7 +1254,8 @@ a {
 ================================== */
 .imgcontainer {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow: hidden; }
 
 /* ==================================
 =fluid images
@@ -1326,16 +1315,13 @@ a {
   margin-bottom: 2.5em; }
   .card
 a {
+    display: block;
     text-decoration: none; }
 
 .card__img {
-  overflow: hidden;
-  margin: 0;
-  padding: 0; }
-  a .card__img > img {
-    display: block;
-    transition: transform 0.25s cubic-bezier(0.4, 0.4, 0.24, 1); }
-  a:hover .card__img > img {
+  display: block;
+  transition: transform 0.25s cubic-bezier(0.4, 0.4, 0.24, 1); }
+  a:hover .card__img {
     transform: scale3d(1.05, 1.05, 1);
     backface-visibility: hidden; }
 
@@ -1450,3 +1436,28 @@ a {
     .motto__txt {
       font-size: 38px;
       font-size: 2.375rem; } }
+
+/* ==================================
+=teams
+================================== */
+/**
+ * Manages spacing and backgrounds for both teams
+*/
+.team {
+  margin-top: 2.5em; }
+  @media all and (min-width: 47.5em) {
+    .team {
+      margin-top: 3.75em; } }
+  @media all and (min-width: 64em) {
+    .team {
+      margin-top: 5em; } }
+
+.team--internal {
+  padding-bottom: 100px;
+  background: url(../../img/bkg_plus.svg) bottom center no-repeat; }
+  @media all and (min-width: 47.5em) {
+    .team--internal {
+      padding-bottom: 7.5em; } }
+  @media all and (min-width: 64em) {
+    .team--internal {
+      padding-bottom: 7.5em; } }
