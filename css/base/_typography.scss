@@ -43,7 +43,7 @@ body
 {
   @extend %title;
   @include rem-size(28px);
-  font-weight: 700;
+  font-weight: 600;
 
   @include mq(small)
   {

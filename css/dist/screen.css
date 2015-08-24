@@ -133,7 +133,7 @@ body {
 .h1 {
   font-size: 28px;
   font-size: 1.75rem;
-  font-weight: 700; }
+  font-weight: 600; }
   @media all and (min-width: 31.25em) {
     .h1 {
       font-size: 34px;
@@ -1137,6 +1137,23 @@ body {
       padding-left: 7.89474%;
       padding-right: 7.89474%; } }
 
+/**
+   * Variant when needs to overlay a picture / previous block
+  */
+.container--overlay {
+  padding-top: 80px;
+  margin-top: -120px;
+  z-index: 50; }
+  @media all and (min-width: 47.5em) {
+    .container--overlay {
+      margin-top: -10em; } }
+  @media all and (min-width: 64em) {
+    .container--overlay {
+      margin-top: -11.25em; } }
+
+.container--highlight {
+  background: #FFED00; }
+
 /*
  * Content modules
  *
@@ -1194,16 +1211,23 @@ body {
       padding-top: 7.5em;
       padding-bottom: 7.5em; } }
 
+/* ==================================
+=links
+================================== */
 a {
   color: #00ABE7;
   text-decoration: none;
-  font-weight: 600; }
+  transition: color 0.2s linear; }
   a:hover {
-    color: #00ABE7;
-    text-decoration: underline; }
+    color: #067BC2;
+    text-decoration: none; }
 
+/* ==================================
+=block links
+================================== */
 .blocklink, .blocklink:hover {
-  text-decoration: none; }
+  text-decoration: none;
+  border: none; }
 
 /* ==================================
 =list helpers
@@ -1253,6 +1277,50 @@ a {
 ================================== */
 .fluidimg {
   max-width: 100%; }
+
+/* ==================================
+=full width images
+================================== */
+.fullwidthimg {
+  height: 250px;
+  background-color: #E5E5E5;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10; }
+  @media all and (min-width: 47.5em) {
+    .fullwidthimg {
+      height: 400px; } }
+  @media all and (min-width: 64em) {
+    .fullwidthimg {
+      height: 500px; } }
+  @media all and (min-width: 71.25em) {
+    .fullwidthimg {
+      height: 600px; } }
+
+.fullwidthimg--homeintro {
+  background-image: url(../../img/homeintro_600.jpg); }
+  @media all and (min-width: 31.25em) {
+    .fullwidthimg--homeintro {
+      background-image: url(../../img/homeintro_800.jpg); } }
+  @media all and (min-width: 64em) {
+    .fullwidthimg--homeintro {
+      background-image: url(../../img/homeintro_1200.jpg); } }
+  @media all and (min-width: 71.25em) {
+    .fullwidthimg--homeintro {
+      background-image: url(../../img/homeintro_1500.jpg); } }
+
+.fullwidthimg--hometeam {
+  background-image: url(../../img/hometeam_600.jpg); }
+  @media all and (min-width: 31.25em) {
+    .fullwidthimg--hometeam {
+      background-image: url(../../img/hometeam_800.jpg); } }
+  @media all and (min-width: 64em) {
+    .fullwidthimg--hometeam {
+      background-image: url(../../img/hometeam_1200.jpg); } }
+  @media all and (min-width: 71.25em) {
+    .fullwidthimg--hometeam {
+      background-image: url(../../img/hometeam_1500.jpg); } }
 
 /* ==================================
 =cards

@@ -1,17 +1,26 @@
+/* ==================================
+=links
+================================== */
+
 a
 {
   color: $color-accent1;
   text-decoration: none;
-  font-weight: 600;
+  transition: color 0.2s linear;
 
   &:hover
   {
-    color: $color-accent1;
-    text-decoration: underline;
+    color: $color-accent2;
+    text-decoration: none;
   }
 }
+
+/* ==================================
+=block links
+================================== */
 
 .blocklink, .blocklink:hover
 {
   text-decoration: none;
+  border: none;
 }

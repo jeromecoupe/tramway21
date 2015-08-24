@@ -8,6 +8,7 @@
   padding: 0;
 }
 
+
 /* ==================================
 =fluid images
 ================================== */
@@ -15,4 +16,74 @@
 .fluidimg
 {
   max-width: 100%;
+}
+
+
+/* ==================================
+=full width images
+================================== */
+
+.fullwidthimg
+{
+  height: 250px;
+  background-color: $color-base3;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+
+  @include mq(medium)
+  {
+    height: 400px;
+  }
+
+  @include mq(large)
+  {
+    height: 500px;
+  }
+
+  @include mq(xlarge)
+  {
+    height: 600px;
+  }
+}
+
+.fullwidthimg--homeintro
+{
+  background-image: url(../../img/homeintro_600.jpg);
+
+  @include mq(small)
+  {
+    background-image: url(../../img/homeintro_800.jpg);
+  }
+
+  @include mq(large)
+  {
+    background-image: url(../../img/homeintro_1200.jpg);
+  }
+
+  @include mq(xlarge)
+  {
+    background-image: url(../../img/homeintro_1500.jpg);
+  }
+}
+
+.fullwidthimg--hometeam
+{
+  background-image: url(../../img/hometeam_600.jpg);
+
+  @include mq(small)
+  {
+    background-image: url(../../img/hometeam_800.jpg);
+  }
+
+  @include mq(large)
+  {
+    background-image: url(../../img/hometeam_1200.jpg);
+  }
+
+  @include mq(xlarge)
+  {
+    background-image: url(../../img/hometeam_1500.jpg);
+  }
 }
