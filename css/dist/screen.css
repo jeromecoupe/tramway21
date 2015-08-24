@@ -127,63 +127,59 @@ body {
 .h1, .h2, .h3, .h4, .footertitle {
   margin: 0 0 0.5em 0;
   font-family: "bookmania", Georgia, Times, serif;
-  line-height: 1.2;
+  line-height: 1.1;
   color: #221F1F; }
 
 .h1 {
-  font-size: 28px;
-  font-size: 1.75rem;
+  font-size: 29px;
+  font-size: 1.8125rem;
   font-weight: 600; }
-  @media all and (min-width: 31.25em) {
-    .h1 {
-      font-size: 34px;
-      font-size: 2.125rem; } }
   @media all and (min-width: 47.5em) {
     .h1 {
-      font-size: 38px;
-      font-size: 2.375rem;
+      font-size: 37px;
+      font-size: 2.3125rem;
       font-weight: 600; } }
   @media all and (min-width: 64em) {
     .h1 {
-      font-size: 54px;
-      font-size: 3.375rem; } }
+      font-size: 47px;
+      font-size: 2.9375rem; } }
 
 .h1--highlight {
   color: #FFED00; }
 
 .h2 {
   margin-bottom: 1em;
-  font-size: 25px;
-  font-size: 1.5625rem;
+  font-size: 23px;
+  font-size: 1.4375rem;
   font-weight: 600; }
   @media all and (min-width: 64em) {
     .h2 {
-      font-size: 28px;
-      font-size: 1.75rem; } }
+      font-size: 29px;
+      font-size: 1.8125rem; } }
 
 .h2--highlight {
   color: #FFED00; }
 
 .h3 {
-  font-size: 21px;
-  font-size: 1.3125rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700; }
   @media all and (min-width: 64em) {
     .h3 {
-      font-size: 25px;
-      font-size: 1.5625rem; } }
+      font-size: 23px;
+      font-size: 1.4375rem; } }
 
 .h3--highlight {
   color: #FFED00; }
 
 .h4 {
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: 600; }
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 700; }
   @media all and (min-width: 64em) {
     .h4 {
-      font-size: 21px;
-      font-size: 1.3125rem; } }
+      font-size: 18px;
+      font-size: 1.125rem; } }
 
 .h4--highlight {
   color: #FFED00; }
@@ -1276,7 +1272,8 @@ a {
 =fluid images
 ================================== */
 .fluidimg {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 /* ==================================
 =full width images
@@ -1331,15 +1328,26 @@ a {
 a {
     text-decoration: none; }
 
+.card__img {
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+  a .card__img > img {
+    display: block;
+    transition: transform 0.25s cubic-bezier(0.4, 0.4, 0.24, 1); }
+  a:hover .card__img > img {
+    transform: scale3d(1.05, 1.05, 1);
+    backface-visibility: hidden; }
+
 .card__body {
-  margin-top: 0.9375em; }
+  margin-top: 1.25em; }
 
 .card__title {
-  margin: 0 0 0.5em;
+  margin: 0 0 0.35em;
   padding: 0;
   font-family: "bookmania", Georgia, Times, serif;
-  font-size: 21px;
-  font-size: 1.3125rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   color: #221F1F;
   transition: color 0.25s linear; }
   a:hover .card__title {
