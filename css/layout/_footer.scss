@@ -1,0 +1,17 @@
+.pagefooter
+{
+  padding-top: calc-em(60px);
+  padding-bottom: calc-em(60px);
+
+  @include mq(medium)
+  {
+    padding-top: calc-em(100px);
+    padding-bottom: calc-em(100px);
+  }
+
+  @include mq(large)
+  {
+    padding-top: calc-em(120px);
+    padding-bottom: calc-em(120px);
+  }
+}

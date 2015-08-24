@@ -1,0 +1,92 @@
+/* ==================================
+=cards
+================================== */
+
+.card
+{
+  margin-bottom: calc-em(40px);
+
+  a
+  {
+    text-decoration: none;
+  }
+}
+
+.card__body
+{
+  margin-top: calc-em(15px);
+}
+
+.card__title
+{
+  margin: 0 0 0.5em;
+  padding: 0;
+  font-family: $fontstack-alt;
+  @include rem-size(21px);
+  color: $color-base8;
+
+  transition: color 0.25s linear;
+
+  a:hover &
+  {
+    color: $color-accent1;
+  }
+}
+
+.card__text
+{
+  color: $color-base6;
+  text-decoration: none;
+}
+
+/* ==================================
+=text in columns
+================================== */
+
+.txtcolumns
+{
+  @include mq(medium)
+  {
+    column-gap: calc-em(22px);
+  }
+}
+
+.txtcolumns--2
+{
+  @include mq(medium)
+  {
+    column-count: 2;
+  }
+}
+
+/* ==================================
+=team members
+================================== */
+
+.teammember
+{
+  margin-bottom: 1.5em;
+
+  @include mq(medium)
+  {
+    margin-bottom: calc-em(30px);
+  }
+}
+
+.teammember__name
+{
+  margin-bottom: 0.25em;
+  font-family: $fontstack-main;
+  @include rem-size(14px);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $color-base2;
+}
+
+.teammember__function
+{
+  font-family: $fontstack-alt;
+  @include rem-size(16px);
+  font-weight: 400;
+  color: $color-base5;
+}
