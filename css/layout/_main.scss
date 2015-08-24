@@ -25,14 +25,15 @@
 }
 
 /*
- * Page modules
+ * Content modules
  *
- * - handles vertical spacing
+ * - handle vertical spacing
  * - background color variations
+ * - content submodules
  *
 **/
 
-.pagemodule
+.contentmodule
 {
   padding-top: calc-em(60px);
   padding-bottom: calc-em(60px);
@@ -50,7 +51,40 @@
   }
 }
 
-.pagemodule--highlight
-{
-  background-color: $color-main1;
-}
+  /**
+   * Color variations
+  */
+
+  .contentmodule--highlight
+  {
+    background-color: $color-main1;
+  }
+
+  .contentmodule--dark
+  {
+    background-color: $color-base7;
+    color: $color-base5;
+  }
+
+
+  /**
+   * content submodules
+   *
+   * used to create vertical whitespace when various content blocks are used
+   * in one module
+  */
+
+  .contentsubmodule + .contentsubmodule
+  {
+    margin-top: calc-em(40px);
+
+    @include mq(medium)
+    {
+      margin-top: calc-em(60px);
+    }
+
+    @include mq(large)
+    {
+      margin-top: calc-em(80px);
+    }
+  }

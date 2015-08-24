@@ -185,7 +185,7 @@ $mq-list: (
 
 @mixin make-grid($namespace:"")
 {
-	#{$class-type}grid__unit--full { width:100%; }
+	#{$class-type}grid__unit--#{$namespace}full { width:100%; }
 
 	#{$class-type}grid__unit--#{$namespace}1of10 { width:1/10 * 100%; }
 	#{$class-type}grid__unit--#{$namespace}2of10 { width:2/10 * 100%; }
@@ -312,18 +312,18 @@ $mq-list: (
     @media #{$mq-query} {
 
       // generate default grid classes for all media queries
-      @include make-grid("#{$mq-name}");
+      @include make-grid("#{$mq-name}-");
 
       // generate push grid classes for all media queries
       @if ($use-pushclasses == true)
 			{
-				@include pushclasses("#{$mq-name}");
+				@include pushclasses("#{$mq-name}-");
 			}
 
       // generate pull grid classes for all media queries
 			@if ($use-pullclasses == true)
 			{
-				@include pullclasses("#{$mq-name}");
+				@include pullclasses("#{$mq-name}-");
 			}
     }
   }

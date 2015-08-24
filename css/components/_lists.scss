@@ -3,12 +3,18 @@
 ================================== */
 
 /**
- * Strip lists of list attributes
+ * Remove all list attributes
 */
 
 .list-bare
 {
   @include list-bare();
+}
+
+.list-stripped
+{
+  @include list-bare();
+  margin-bottom: 1em;
 }
 
 /**

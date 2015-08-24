@@ -1,0 +1,17 @@
+a
+{
+  color: $color-accent1;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover
+  {
+    color: $color-accent1;
+    text-decoration: underline;
+  }
+}
+
+.blocklink, .blocklink:hover
+{
+  text-decoration: none;
+}
