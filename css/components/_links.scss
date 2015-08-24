@@ -6,12 +6,11 @@ a
 {
   color: $color-accent1;
   text-decoration: none;
-  transition: color 0.2s linear;
 
   &:hover
   {
-    color: $color-accent2;
-    text-decoration: none;
+    color: $color-accent1;
+    text-decoration: underline;
   }
 }
 
@@ -22,5 +21,4 @@ a
 .blocklink, .blocklink:hover
 {
   text-decoration: none;
-  border: none;
 }

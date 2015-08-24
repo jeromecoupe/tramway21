@@ -29,17 +29,19 @@
   */
   .container--overlay
   {
-    padding-top: 80px;
+    padding-top: 60px;
     margin-top: -120px;
     z-index: 50;
 
     @include mq(medium)
     {
+      padding-top: 80px;
       margin-top: calc-em(-160px);
     }
 
     @include mq(large)
     {
+      padding-top: 100px;
       margin-top: calc-em(-180px);
     }
   }
