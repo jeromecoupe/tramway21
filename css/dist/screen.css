@@ -1321,11 +1321,13 @@ a {
 =motto
 ================================== */
 .motto {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
   margin-top: 2.5em;
   margin-bottom: 2.5em; }
   @media all and (min-width: 47.5em) {
     .motto {
-      display: flex;
       flex-direction: row;
       align-items: center;
       margin-top: 5em;
@@ -1338,9 +1340,17 @@ a {
 .motto__img {
   margin: 0 1em 0 0;
   padding: 0; }
+  @media all and (min-width: 47.5em) {
+    .motto__img {
+      float: left; } }
 
 .motto__body {
-  flex: 1; }
+  flex: 1;
+  margin-top: 1.375em;
+  overflow: hidden; }
+  @media all and (min-width: 47.5em) {
+    .motto__body {
+      margin-top: 0; } }
 
 .motto__txt {
   margin: 0;
