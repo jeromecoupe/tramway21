@@ -53,10 +53,10 @@
 }
 
 /* ==================================
-=text in columns
+=columns module
 ================================== */
 
-.txtcolumns
+.mod-columns
 {
   @include mq(medium)
   {
@@ -64,11 +64,23 @@
   }
 }
 
-.txtcolumns--2
+.mod-columns--2
 {
   @include mq(medium)
   {
     column-count: 2;
+  }
+}
+
+/* ==================================
+=padded module
+================================== */
+
+.mod-rightpadded
+{
+  @include mq(medium)
+  {
+    padding-right: 25%;
   }
 }
 

@@ -1,4 +1,26 @@
 /* ==================================
+=intro
+================================== */
+
+.homeintro
+{
+  margin-top: calc-em(40px);
+  margin-bottom: calc-em(40px);
+
+  @include mq(medium)
+  {
+    margin-top: calc-em(60px);
+    margin-bottom: calc-em(60px);
+  }
+
+  @include mq(large)
+  {
+    margin-top: calc-em(120px);
+    margin-bottom: calc-em(120px);
+  }
+}
+
+/* ==================================
 =motto
 ================================== */
 
@@ -8,22 +30,10 @@
   align-items: flex-start;
   flex-direction: column;
 
-  margin-top: calc-em(40px);
-  margin-bottom: calc-em(40px);
-
   @include mq(medium)
   {
     flex-direction: row;
     align-items: center;
-
-    margin-top: calc-em(80px);
-    margin-bottom: calc-em(80px);
-  }
-
-  @include mq(large)
-  {
-    margin-top: calc-em(160px);
-    margin-bottom: calc-em(160px);
   }
 }
 

@@ -113,7 +113,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 gulp.task('watch', ['browser-sync'], function () {
 	gulp.watch('./css/**/*.scss', ['css']);
 	gulp.watch('./js/modules/**/*', ['jslint', 'scripts']);
-	gulp.watch(['index.html','_includes/**/*','_layouts/**/*'], ['jekyll-rebuild']);
+	gulp.watch(['./*.html','_includes/**/*','_layouts/**/*'], ['jekyll-rebuild']);
 });
 
 // Tasks

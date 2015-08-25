@@ -1117,6 +1117,18 @@ body {
     right: 91.66667%; } }
 
 /* ==================================
+=header
+================================== */
+.siteheader {
+  margin-top: 2.5em; }
+  @media all and (min-width: 47.5em) {
+    .siteheader {
+      margin-top: 3.75em; } }
+  @media all and (min-width: 64em) {
+    .siteheader {
+      margin-top: 5em; } }
+
+/* ==================================
 =main layout
 ================================== */
 /*
@@ -1264,6 +1276,9 @@ a {
   max-width: 100%;
   height: auto; }
 
+.fluidimg--full {
+  width: 100%; }
+
 /* ==================================
 =full width images
 ================================== */
@@ -1344,15 +1359,22 @@ a {
   text-decoration: none; }
 
 /* ==================================
-=text in columns
+=columns module
 ================================== */
 @media all and (min-width: 47.5em) {
-  .txtcolumns {
+  .mod-columns {
     column-gap: 1.375em; } }
 
 @media all and (min-width: 47.5em) {
-  .txtcolumns--2 {
+  .mod-columns--2 {
     column-count: 2; } }
+
+/* ==================================
+=padded module
+================================== */
+@media all and (min-width: 47.5em) {
+  .mod-rightpadded {
+    padding-right: 25%; } }
 
 /* ==================================
 =team members
@@ -1380,24 +1402,31 @@ a {
   color: #9D9D9D; }
 
 /* ==================================
+=intro
+================================== */
+.homeintro {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em; }
+  @media all and (min-width: 47.5em) {
+    .homeintro {
+      margin-top: 3.75em;
+      margin-bottom: 3.75em; } }
+  @media all and (min-width: 64em) {
+    .homeintro {
+      margin-top: 7.5em;
+      margin-bottom: 7.5em; } }
+
+/* ==================================
 =motto
 ================================== */
 .motto {
   display: flex;
   align-items: flex-start;
-  flex-direction: column;
-  margin-top: 2.5em;
-  margin-bottom: 2.5em; }
+  flex-direction: column; }
   @media all and (min-width: 47.5em) {
     .motto {
       flex-direction: row;
-      align-items: center;
-      margin-top: 5em;
-      margin-bottom: 5em; } }
-  @media all and (min-width: 64em) {
-    .motto {
-      margin-top: 10em;
-      margin-bottom: 10em; } }
+      align-items: center; } }
 
 .motto__img {
   margin: 0 1em 0 0;
