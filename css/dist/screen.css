@@ -1320,7 +1320,7 @@ a {
 
 .card__img {
   display: block;
-  transition: transform 0.25s cubic-bezier(0.4, 0.4, 0.24, 1); }
+  transition: transform 0.2s cubic-bezier(0.4, 0.4, 0.24, 1); }
   a:hover .card__img {
     transform: scale3d(1.05, 1.05, 1);
     backface-visibility: hidden; }
@@ -1335,7 +1335,7 @@ a {
   font-size: 18px;
   font-size: 1.125rem;
   color: #221F1F;
-  transition: color 0.25s linear; }
+  transition: color 0.2s linear; }
   a:hover .card__title {
     color: #00ABE7; }
 
