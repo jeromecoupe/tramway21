@@ -598,6 +598,13 @@ body {
       font-size: 1rem; } }
 
 /* ==================================
+=amperstand
+================================== */
+.amperstand {
+  font-family: "bookmania", Georgia, Times, serif;
+  font-style: italic; }
+
+/* ==================================
 =grid
 ================================== */
 /**
@@ -1485,6 +1492,61 @@ body {
     .siteheader {
       margin-top: 5em; } }
 
+.siteheader__logo {
+  margin: 2.5em 0 0 0;
+  padding: 0; }
+  @media all and (min-width: 31.25em) {
+    .siteheader__logo {
+      margin-top: 0;
+      float: left; } }
+
+@media all and (min-width: 31.25em) {
+  .siteheader__nav {
+    float: right;
+    margin-top: 2.5em;
+    margin-bottom: 0; } }
+
+.lggnav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right; }
+  .lggnav
+img {
+    display: block; }
+
+.lggnav__item {
+  display: inline-block;
+  margin-right: 0.5em; }
+  .lggnav__item:last-child {
+    margin-right: 0; }
+
+.lggnav__item > a {
+  display: inline-block;
+  padding: 0.65em 0.75em 0.5em;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #E5E5E5;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #2F2F2F; }
+  @media all and (min-width: 31.25em) {
+    .lggnav__item > a {
+      padding: 0.7em 0.8em 0.5em;
+      border-width: 5px;
+      font-size: 14px;
+      font-size: 0.875rem; } }
+  .lggnav__item > a:hover {
+    border-color: #FFED00;
+    color: #2F2F2F;
+    text-decoration: none; }
+
+.lggnav__item--current > a, .lggnav__item--current > a:hover {
+  border-color: #FFED00; }
+
 /* ==================================
 =main layout
 ================================== */
@@ -1577,10 +1639,61 @@ a {
     text-decoration: underline; }
 
 /* ==================================
+=links in titles
+================================== */
+h1
+a
+, h2
+a
+, h3
+a
+, h4
+a
+, h5
+a
+, h6
+a {
+  color: #2F2F2F; }
+
+h1
+a:hover
+, h2
+a:hover
+, h3
+a:hover
+, h4
+a:hover
+, h5
+a:hover
+, h6
+a:hover {
+  color: #00ABE7;
+  text-decoration: none; }
+
+/* ==================================
 =block links
 ================================== */
 .blocklink, .blocklink:hover {
   text-decoration: none; }
+
+/* ==================================
+=buttons
+================================== */
+.button {
+  display: inline-block;
+  padding: 0.6em 1em;
+  border: 5px solid #FFED00;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #221F1F;
+  text-decoration: none;
+  transition: all 0.2s linear; }
+  .button:hover {
+    border-color: #E5E5E5;
+    color: #595959;
+    text-decoration: none; }
 
 /* ==================================
 =list helpers
@@ -1617,6 +1730,25 @@ a {
     margin-bottom: 2.11em; }
   .list-vspace--large > li {
     margin-bottom: 2.813em; }
+
+/* ==================================
+=case studies items
+================================== */
+.list-casestudy {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.list-casestudy__item {
+  margin-bottom: 0.5em;
+  font-family: "bookmania", Georgia, Times, serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #9D9D9D; }
+  .list-casestudy__item:last-child {
+    margin-bottom: 0; }
 
 /* ==================================
 =media containers
@@ -1692,6 +1824,7 @@ a {
 
 .card__img {
   display: block;
+  transform: scale3d(1, 1, 1);
   transition: transform 0.2s cubic-bezier(0.4, 0.4, 0.24, 1); }
   a:hover .card__img {
     transform: scale3d(1.05, 1.05, 1);
@@ -1756,6 +1889,69 @@ a {
   font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
+  color: #9D9D9D; }
+
+/* ==================================
+=box
+================================== */
+.box {
+  padding: 2.5em; }
+  .box > *:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+
+.box--framed {
+  border: 5px solid #FFED00; }
+
+/* ==================================
+=prevnext
+================================== */
+.itemsnav {
+  border-top: 1px solid #E5E5E5;
+  padding-top: 4em;
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 4em; }
+
+.itemsnav__previous, .itemsnav__next {
+  position: relative; }
+
+.itemsnav__previous {
+  padding-left: 5em; }
+
+.itemsnav__next {
+  padding-right: 5em; }
+
+.itemsnav__previousbtn {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.itemsnav__nextbtn {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.itemsnav__btn {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  border: 5px solid #FFED00;
+  color: #221F1F;
+  font-weight: 700;
+  transition: border-color 0.2s linear; }
+  a:hover .itemsnav__btn {
+    border-color: #E5E5E5; }
+
+.itemsnav__title {
+  margin-bottom: 0.75em;
+  font-family: "bookmania", Georgia, Times, serif;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  color: #221F1F;
+  transition: color 0.2s linear; }
+  a:hover .itemsnav__title {
+    color: #00ABE7; }
+
+.itemsnav__txt {
   color: #9D9D9D; }
 
 /* ==================================

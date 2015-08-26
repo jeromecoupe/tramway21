@@ -1,7 +1,19 @@
 <header class="siteheader">
-  <div class="container">
+  <div class="container  clearfix">
 
-    {% include inlinesvgs/logo.svg %}
+    <div class="siteheader__nav">
+      <nav>
+        <ul class="lggnav">
+          <li class="lggnav__item"><a href="fake.html">FR</a></li><!--
+       --><li class="lggnav__item"><a href="fake.html">NL</a></li><!--
+       --><li class="lggnav__item  lggnav__item--current"><a href="fake.html">EN</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    {% if page.home != true %}
+    <p class="siteheader__logo"><img src="./img/logo.svg" width="120" height="120" alt="Tramway21"></p>
+    {% endif %}
 
   </div>
 </header>

@@ -1,0 +1,25 @@
+/* ==================================
+=buttons
+================================== */
+
+.button
+{
+  display: inline-block;
+  padding: 0.6em 1em;
+  border: 5px solid $color-main1;
+
+  @include rem-size(14px);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $color-base8;
+  text-decoration: none;
+
+  transition: all 0.2s linear;
+
+  &:hover
+  {
+    border-color: $color-base3;
+    color: $color-base6;
+    text-decoration: none;
+  }
+}

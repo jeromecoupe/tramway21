@@ -4,6 +4,7 @@
 
 .siteheader
 {
+
   margin-top: calc-em(40px);
 
   @include mq(medium)
@@ -15,4 +16,82 @@
   {
     margin-top: calc-em(80px);
   }
+}
+
+.siteheader__logo
+{
+  margin: calc-em(40px) 0 0 0;
+  padding: 0;
+
+  @include mq(small)
+  {
+    margin-top: 0;
+    float: left;
+  }
+}
+
+.siteheader__nav
+{
+  @include mq(small)
+  {
+    float: right;
+    margin-top: 2.5em;
+    margin-bottom: 0;
+  }
+}
+
+.lggnav
+{
+  @include list-bare();
+  text-align: right;
+
+  img
+  {
+    display: block;
+  }
+}
+
+.lggnav__item
+{
+  display: inline-block;
+  margin-right: 0.5em;
+
+  &:last-child
+  {
+    margin-right: 0;
+  }
+}
+
+.lggnav__item > a
+{
+  display: inline-block;
+  padding: 0.65em 0.75em 0.5em;
+  border-width: 3px;
+  border-style: solid;
+  border-color: $color-base3;
+
+  @include rem-size(14px);
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $color-base7;
+
+  @include mq(small)
+  {
+    padding: 0.7em 0.8em 0.5em;
+    border-width: 5px;
+    @include rem-size(14px);
+  }
+
+  &:hover
+  {
+    border-color: $color-main1;
+    color: $color-base7;
+    text-decoration: none;
+  }
+}
+
+.lggnav__item--current > a, .lggnav__item--current > a:hover
+{
+  border-color: $color-main1;
 }

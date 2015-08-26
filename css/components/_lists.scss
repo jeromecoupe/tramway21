@@ -52,3 +52,27 @@
     margin-bottom: 2.813em;
   }
 }
+
+/* ==================================
+=case studies items
+================================== */
+
+.list-casestudy
+{
+  @include list-bare();
+}
+
+.list-casestudy__item
+{
+  margin-bottom: 0.5em;
+  font-family: $fontstack-alt;
+  @include rem-size(16px);
+  font-style: italic;
+  font-weight: 600;
+  color: $color-base5;
+
+  &:last-child
+  {
+    margin-bottom: 0;
+  }
+}
