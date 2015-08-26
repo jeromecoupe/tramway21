@@ -189,3 +189,12 @@ body
     @include rem-size(16px);
   }
 }
+
+/* ==================================
+=amperstand
+================================== */
+.amperstand
+{
+  font-family: $fontstack-alt;
+  font-style: italic;
+}

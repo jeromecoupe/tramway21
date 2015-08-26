@@ -16,6 +16,7 @@
 .card__img
 {
   display: block;
+  transform: scale3d(1,1,1);
   transition: transform 0.2s cubic-bezier(0.4, 0.4, 0.24, 1);
 
   a:hover &
@@ -52,6 +53,7 @@
   text-decoration: none;
 }
 
+
 /* ==================================
 =columns module
 ================================== */
@@ -72,6 +74,7 @@
   }
 }
 
+
 /* ==================================
 =padded module
 ================================== */
@@ -83,6 +86,7 @@
     padding-right: 25%;
   }
 }
+
 
 /* ==================================
 =team members
@@ -113,5 +117,105 @@
   font-family: $fontstack-alt;
   @include rem-size(16px);
   font-weight: 400;
+  color: $color-base5;
+}
+
+
+/* ==================================
+=box
+================================== */
+
+.box
+{
+  padding: calc-em(40px);
+
+  & > *:last-child
+  {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.box--framed
+{
+  border: 5px solid $color-main1;
+}
+
+
+/* ==================================
+=prevnext
+================================== */
+
+.itemsnav
+{
+  border-top: 1px solid $color-base3;
+  padding-top: 4em;
+
+  border-bottom: 1px solid $color-base3;
+  padding-bottom: 4em;
+}
+
+.itemsnav__previous, .itemsnav__next
+{
+  position: relative;
+}
+
+  .itemsnav__previous
+  {
+    padding-left: 5em;
+  }
+
+  .itemsnav__next
+  {
+    padding-right: 5em;
+  }
+
+.itemsnav__previousbtn
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.itemsnav__nextbtn
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.itemsnav__btn
+{
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  border: 5px solid $color-main1;
+  color: $color-base8;
+  font-weight: 700;
+
+  transition: border-color 0.2s linear;
+
+  a:hover &
+  {
+    border-color: $color-base3;
+  }
+}
+
+.itemsnav__title
+{
+  margin-bottom: 0.75em;
+  font-family: $fontstack-alt;
+  @include rem-size(19px);
+  color: $color-base8;
+
+  transition: color 0.2s linear;
+
+  a:hover &
+  {
+    color: $color-accent1;
+  }
+}
+
+.itemsnav__txt
+{
   color: $color-base5;
 }
