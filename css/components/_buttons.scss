@@ -5,14 +5,14 @@
 .button
 {
   display: inline-block;
-  padding: 0.6em 1em;
+  padding: 1em 2em 0.8em;
   border: 5px solid $color-main1;
-
+  font-family: $fontstack-main;
   @include rem-size(14px);
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1;
   text-transform: uppercase;
-  color: $color-base8;
-  text-decoration: none;
+  color: $color-base7;
 
   transition: all 0.2s linear;
 

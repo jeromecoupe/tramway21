@@ -1484,68 +1484,93 @@ body {
 =header
 ================================== */
 .siteheader {
-  margin-top: 2.5em; }
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+  border-bottom: 1px solid #E5E5E5; }
   @media all and (min-width: 47.5em) {
     .siteheader {
-      margin-top: 3.75em; } }
-  @media all and (min-width: 64em) {
-    .siteheader {
-      margin-top: 5em; } }
+      padding-top: 2.5em;
+      padding-bottom: 2.5em; } }
 
 .siteheader__logo {
-  margin: 2.5em 0 0 0;
-  padding: 0; }
-  @media all and (min-width: 31.25em) {
-    .siteheader__logo {
-      margin-top: 0;
-      float: left; } }
-
-@media all and (min-width: 31.25em) {
-  .siteheader__nav {
-    float: right;
-    margin-top: 2.5em;
-    margin-bottom: 0; } }
-
-.lggnav {
-  list-style: none;
   margin: 0;
   padding: 0;
-  text-align: right; }
-  .lggnav
-img {
-    display: block; }
+  float: left; }
+  .siteheader__logo
+a {
+    text-indent: -9999px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url(../../img/logo_sprite.svg);
+    background-repeat: no-repeat;
+    background-position: 0 -120px; }
+    @media all and (min-width: 47.5em) {
+      .siteheader__logo
+a {
+        width: 120px;
+        height: 120px;
+        background-position: 0 0; } }
 
-.lggnav__item {
-  display: inline-block;
-  margin-right: 0.5em; }
-  .lggnav__item:last-child {
-    margin-right: 0; }
+.siteheader__contact {
+  float: right; }
 
-.lggnav__item > a {
-  display: inline-block;
-  padding: 0.65em 0.75em 0.5em;
-  border-width: 3px;
-  border-style: solid;
-  border-color: #E5E5E5;
+.cta, .cta-compact {
+  margin: 0;
+  padding: 0; }
+
+.cta {
+  display: none;
+  margin-top: 2.2em; }
+  @media all and (min-width: 47.5em) {
+    .cta {
+      display: block; } }
+
+.cta-compact {
+  display: block;
+  margin-top: 1.2em; }
+  @media all and (min-width: 47.5em) {
+    .cta-compact {
+      display: none; } }
+  .cta-compact
+a {
+    font-family: "bookmania", Georgia, Times, serif;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #9D9D9D; }
+  .cta-compact
+a:hover {
+    color: #595959;
+    text-decoration: none; }
+
+.cta__txt {
+  font-family: "bookmania", Georgia, Times, serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #9D9D9D;
+  margin-right: 1em; }
+  a:hover .cta__txt {
+    text-decoration: none;
+    color: #595959; }
+
+.cta__btn {
+  padding: 1em 2em 0.8em;
+  border: 5px solid #FFED00;
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
   color: #2F2F2F; }
-  @media all and (min-width: 31.25em) {
-    .lggnav__item > a {
-      padding: 0.7em 0.8em 0.5em;
-      border-width: 5px;
-      font-size: 14px;
-      font-size: 0.875rem; } }
-  .lggnav__item > a:hover {
-    border-color: #FFED00;
+  .cta__btn:hover {
+    border-color: #E5E5E5;
     color: #2F2F2F;
     text-decoration: none; }
-
-.lggnav__item--current > a, .lggnav__item--current > a:hover {
-  border-color: #FFED00; }
 
 /* ==================================
 =main layout
@@ -1676,19 +1701,30 @@ a:hover {
 .blocklink, .blocklink:hover {
   text-decoration: none; }
 
+.icon {
+  display: inline-block;
+  vertical-align: middle; }
+
+.icon--after {
+  margin-left: 5px; }
+
+.icon--before {
+  margin-right: 5px; }
+
 /* ==================================
 =buttons
 ================================== */
 .button {
   display: inline-block;
-  padding: 0.6em 1em;
+  padding: 1em 2em 0.8em;
   border: 5px solid #FFED00;
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1;
   text-transform: uppercase;
-  color: #221F1F;
-  text-decoration: none;
+  color: #2F2F2F;
   transition: all 0.2s linear; }
   .button:hover {
     border-color: #E5E5E5;
@@ -1958,43 +1994,29 @@ a {
 =intro
 ================================== */
 .homeintro {
-  margin-top: 2.5em;
-  margin-bottom: 2.5em; }
+  padding-top: 3.75em;
+  padding-bottom: 3.75em; }
+  @media all and (min-width: 31.25em) {
+    .homeintro {
+      padding-top: 6.25em;
+      padding-bottom: 6.25em; } }
   @media all and (min-width: 47.5em) {
     .homeintro {
-      margin-top: 3.75em;
-      margin-bottom: 3.75em; } }
+      padding-top: 8.75em;
+      padding-bottom: 8.75em; } }
   @media all and (min-width: 64em) {
     .homeintro {
-      margin-top: 7.5em;
-      margin-bottom: 7.5em; } }
+      padding-top: 11.25em;
+      padding-bottom: 11.25em; } }
 
 /* ==================================
 =motto
 ================================== */
-.motto {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column; }
-  @media all and (min-width: 47.5em) {
-    .motto {
-      flex-direction: row;
-      align-items: center; } }
-
-.motto__img {
-  margin: 0 1em 0 0;
-  padding: 0; }
-  @media all and (min-width: 47.5em) {
-    .motto__img {
-      float: left; } }
-
-.motto__body {
-  flex: 1;
-  margin-top: 1.375em;
-  overflow: hidden; }
-  @media all and (min-width: 47.5em) {
-    .motto__body {
-      margin-top: 0; } }
+@media all and (min-width: 31.25em) {
+  .motto {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center; } }
 
 .motto__txt {
   margin: 0;
