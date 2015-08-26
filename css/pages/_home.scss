@@ -4,19 +4,25 @@
 
 .homeintro
 {
-  margin-top: calc-em(40px);
-  margin-bottom: calc-em(40px);
+  padding-top: calc-em(60px);
+  padding-bottom: calc-em(60px);
+
+  @include mq(small)
+  {
+    padding-top: calc-em(100px);
+    padding-bottom: calc-em(100px);
+  }
 
   @include mq(medium)
   {
-    margin-top: calc-em(60px);
-    margin-bottom: calc-em(60px);
+    padding-top: calc-em(140px);
+    padding-bottom: calc-em(140px);
   }
 
   @include mq(large)
   {
-    margin-top: calc-em(120px);
-    margin-bottom: calc-em(120px);
+    padding-top: calc-em(180px);
+    padding-bottom: calc-em(180px);
   }
 }
 
@@ -26,43 +32,12 @@
 
 .motto
 {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-
-  @include mq(medium)
+  @include mq(small)
   {
-    flex-direction: row;
-    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
   }
-}
-
-.motto__img
-{
-  margin: 0 1em 0 0;
-  padding: 0;
-
-  // fallback for non flexbox browsers
-  @include mq(medium)
-  {
-    float:left;
-  }
-
-}
-
-.motto__body
-{
-  flex: 1;
-  margin-top: calc-em(22px);
-
-  // fallback for non flexbox browsers
-  overflow: hidden;
-
-  @include mq(medium)
-  {
-    margin-top: 0;
-  }
-
 }
 
 .motto__txt
