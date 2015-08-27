@@ -183,6 +183,11 @@ body
   }
 }
 
+  .text-intro--lighter
+  {
+    color: $color-base5;
+  }
+
 .text-small
 {
   @include rem-size(14px);
