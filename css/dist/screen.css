@@ -508,7 +508,6 @@ body {
   margin-bottom: 1.25em; }
 
 .h2 {
-  margin-bottom: 1em;
   font-size: 23px;
   font-size: 1.4375rem;
   font-weight: 600; }
@@ -519,6 +518,9 @@ body {
 
 .h2--highlight {
   color: #FFED00; }
+
+.h2--mb-medium {
+  margin-bottom: 1.5em; }
 
 .h3 {
   font-size: 18px;
@@ -1483,6 +1485,10 @@ body {
 /* ==================================
 =header
 ================================== */
+/**
+ * General layout
+ * Logo floated left and nav floated right
+*/
 .siteheader {
   padding-top: 1.25em;
   padding-bottom: 1.25em;
@@ -1500,8 +1506,8 @@ body {
 a {
     text-indent: -9999px;
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     background-image: url(../../img/logo_sprite.svg);
     background-repeat: no-repeat;
     background-position: 0 -120px; }
@@ -1515,6 +1521,12 @@ a {
 .siteheader__contact {
   float: right; }
 
+/**
+ * Call to actions
+ *
+ * - 2 versions (need different texts)
+ * - using display none to hide / show them
+*/
 .cta, .cta-compact {
   margin: 0;
   padding: 0; }
@@ -1528,23 +1540,32 @@ a {
 
 .cta-compact {
   display: block;
-  margin-top: 1.2em; }
+  margin-top: 1.75em; }
   @media all and (min-width: 47.5em) {
     .cta-compact {
       display: none; } }
-  .cta-compact
-a {
-    font-family: "bookmania", Georgia, Times, serif;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    font-style: italic;
-    color: #9D9D9D; }
-  .cta-compact
-a:hover {
-    color: #595959;
-    text-decoration: none; }
 
+/**
+ * CTA elements: compact version
+*/
+.cta-compact__txt {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0.4em 10px 0.3em 0;
+  border-right: 1px solid #E5E5E5;
+  font-family: "bookmania", Georgia, Times, serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #9D9D9D;
+  transition: color 0.2s linear; }
+  a:hover .cta-compact__txt {
+    color: #2F2F2F; }
+
+/**
+ * CTA elements: bigger version
+*/
 .cta__txt {
   font-family: "bookmania", Georgia, Times, serif;
   font-size: 16px;
@@ -1558,6 +1579,7 @@ a:hover {
     color: #595959; }
 
 .cta__btn {
+  display: inline-block;
   padding: 1em 2em 0.8em;
   border: 5px solid #FFED00;
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
@@ -1565,11 +1587,11 @@ a:hover {
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1;
-  text-transform: uppercase;
-  color: #2F2F2F; }
+  color: #2F2F2F;
+  transition: all 0.2s linear; }
   .cta__btn:hover {
     border-color: #E5E5E5;
-    color: #2F2F2F;
+    color: #595959;
     text-decoration: none; }
 
 /* ==================================
@@ -1942,6 +1964,11 @@ a {
 /* ==================================
 =prevnext
 ================================== */
+/**
+ * General Layout
+ * - Previous and next navitems in grid
+ * - Padding on elements and absolutely positioned "button"
+*/
 .itemsnav {
   border-top: 1px solid #E5E5E5;
   padding-top: 4em;
@@ -1952,10 +1979,14 @@ a {
   position: relative; }
 
 .itemsnav__previous {
-  padding-left: 5em; }
+  padding-left: 4em; }
 
 .itemsnav__next {
-  padding-right: 5em; }
+  margin-top: 2em;
+  padding-right: 4em; }
+  @media all and (min-width: 47.5em) {
+    .itemsnav__next {
+      margin-top: 0; } }
 
 .itemsnav__previousbtn {
   position: absolute;
@@ -2006,8 +2037,8 @@ a {
       padding-bottom: 8.75em; } }
   @media all and (min-width: 64em) {
     .homeintro {
-      padding-top: 11.25em;
-      padding-bottom: 11.25em; } }
+      padding-top: 10em;
+      padding-bottom: 10em; } }
 
 /* ==================================
 =motto

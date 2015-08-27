@@ -146,6 +146,12 @@
 =prevnext
 ================================== */
 
+/**
+ * General Layout
+ * - Previous and next navitems in grid
+ * - Padding on elements and absolutely positioned "button"
+*/
+
 .itemsnav
 {
   border-top: 1px solid $color-base3;
@@ -157,17 +163,23 @@
 
 .itemsnav__previous, .itemsnav__next
 {
-  position: relative;
+  position: relative; // positioning context for buttons
 }
 
   .itemsnav__previous
   {
-    padding-left: 5em;
+    padding-left: 4em;
   }
 
   .itemsnav__next
   {
-    padding-right: 5em;
+    margin-top: 2em;
+    padding-right: 4em;
+
+    @include mq(medium)
+    {
+      margin-top: 0;
+    }
   }
 
 .itemsnav__previousbtn
