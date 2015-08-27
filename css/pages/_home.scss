@@ -1,4 +1,39 @@
 /* ==================================
+=motto
+================================== */
+
+.motto
+{
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-family: $fontstack-alt;
+  @include rem-size(21px);
+  line-height: 1.35;
+  color: $color-base8;
+
+  @include mq(small)
+  {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    @include rem-size(25px);
+  }
+
+  @include mq(medium)
+  {
+    @include rem-size(34px);
+    line-height: 1.25;
+  }
+
+  @include mq(large)
+  {
+    @include rem-size(38px);
+  }
+}
+
+/* ==================================
 =intro
 ================================== */
 
@@ -37,41 +72,6 @@
   @include mq(medium)
   {
     margin-top: 0;
-  }
-}
-
-/* ==================================
-=motto
-================================== */
-
-.motto
-{
-  margin: 0;
-  padding: 0;
-
-  font-weight: 400;
-  font-family: $fontstack-alt;
-  @include rem-size(21px);
-  line-height: 1.35;
-  color: $color-base8;
-
-  @include mq(small)
-  {
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-    @include rem-size(25px);
-  }
-
-  @include mq(medium)
-  {
-    @include rem-size(34px);
-    line-height: 1.15;
-  }
-
-  @include mq(large)
-  {
-    @include rem-size(38px);
   }
 }
 
