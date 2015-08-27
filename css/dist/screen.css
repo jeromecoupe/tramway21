@@ -456,7 +456,7 @@ video, audio
 form {
   margin: 0;
   padding: 0;
-  margin-bottom: 1em; }
+  margin-bottom: 1.25em; }
 
 /* ==================================
 =base typography
@@ -590,6 +590,9 @@ body {
     .text-intro {
       font-size: 21px;
       font-size: 1.3125rem; } }
+
+.text-intro--lighter {
+  color: #9D9D9D; }
 
 .text-small {
   font-size: 14px;
@@ -1540,7 +1543,7 @@ a {
 
 .cta-compact {
   display: block;
-  margin-top: 1.75em; }
+  margin-top: 1.5em; }
   @media all and (min-width: 47.5em) {
     .cta-compact {
       display: none; } }
@@ -2041,34 +2044,40 @@ a {
       padding-bottom: 10em; } }
 
 /* ==================================
+=values
+================================== */
+.homevalues {
+  margin-top: 1.5em; }
+  @media all and (min-width: 47.5em) {
+    .homevalues {
+      margin-top: 0; } }
+
+/* ==================================
 =motto
 ================================== */
-@media all and (min-width: 31.25em) {
-  .motto {
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center; } }
-
-.motto__txt {
+.motto {
   margin: 0;
   padding: 0;
   font-weight: 400;
   font-family: "bookmania", Georgia, Times, serif;
   font-size: 21px;
   font-size: 1.3125rem;
-  line-height: 1.25; }
+  line-height: 1.35;
+  color: #221F1F; }
   @media all and (min-width: 31.25em) {
-    .motto__txt {
+    .motto {
+      margin-left: 5%;
+      margin-right: 5%;
+      text-align: center;
       font-size: 25px;
-      font-size: 1.5625rem;
-      font-weight: 400; } }
+      font-size: 1.5625rem; } }
   @media all and (min-width: 47.5em) {
-    .motto__txt {
+    .motto {
       font-size: 34px;
       font-size: 2.125rem;
       line-height: 1.15; } }
   @media all and (min-width: 64em) {
-    .motto__txt {
+    .motto {
       font-size: 38px;
       font-size: 2.375rem; } }
 

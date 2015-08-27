@@ -27,20 +27,24 @@
 }
 
 /* ==================================
+=values
+================================== */
+
+.homevalues
+{
+  margin-top: 1.5em;
+
+  @include mq(medium)
+  {
+    margin-top: 0;
+  }
+}
+
+/* ==================================
 =motto
 ================================== */
 
 .motto
-{
-  @include mq(small)
-  {
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-  }
-}
-
-.motto__txt
 {
   margin: 0;
   padding: 0;
@@ -48,12 +52,15 @@
   font-weight: 400;
   font-family: $fontstack-alt;
   @include rem-size(21px);
-  line-height: 1.25;
+  line-height: 1.35;
+  color: $color-base8;
 
   @include mq(small)
   {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
     @include rem-size(25px);
-    font-weight: 400;
   }
 
   @include mq(medium)
