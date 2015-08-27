@@ -71,7 +71,6 @@ body
 .h2
 {
   @extend %title;
-  margin-bottom: 1em;
   @include rem-size(23px);
   font-weight: 600;
 
@@ -86,6 +85,10 @@ body
     color: $color-main1;
   }
 
+  .h2--mb-medium
+  {
+    margin-bottom: 1.5em;
+  }
 
 .h3
 {

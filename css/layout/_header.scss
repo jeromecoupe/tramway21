@@ -2,6 +2,11 @@
 =header
 ================================== */
 
+/**
+ * General layout
+ * Logo floated left and nav floated right
+*/
+
 .siteheader
 {
   padding-top: calc-em(20px);
@@ -25,8 +30,8 @@
   {
     text-indent: -9999px;
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     background-image: url(../../img/logo_sprite.svg);
     background-repeat: no-repeat;
     background-position: 0 -120px;
@@ -44,6 +49,13 @@
 {
   float: right;
 }
+
+/**
+ * Call to actions
+ *
+ * - 2 versions (need different texts)
+ * - using display none to hide / show them
+*/
 
 .cta, .cta-compact
 {
@@ -65,28 +77,44 @@
 .cta-compact
 {
   display: block;
-  margin-top: 1.2em;
+  margin-top: 1.75em;
 
   @include mq(medium)
   {
     display: none;
   }
+}
 
-  a
-  {
-    font-family: $fontstack-alt;
-    @include rem-size(14px);
-    font-weight: 700;
-    font-style: italic;
-    color: $color-base5;
-  }
 
-  a:hover
+/**
+ * CTA elements: compact version
+*/
+
+.cta-compact__txt
+{
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0.4em 10px 0.3em 0;
+  border-right: 1px solid $color-base3;
+
+  font-family: $fontstack-alt;
+  @include rem-size(14px);
+  font-weight: 600;
+  font-style: italic;
+  color: $color-base5;
+
+  transition: color 0.2s linear;
+
+  a:hover &
   {
-    color: $color-base6;
-    text-decoration: none;
+    color: $color-base7;
   }
 }
+
+
+/**
+ * CTA elements: bigger version
+*/
 
 .cta__txt
 {
@@ -106,19 +134,22 @@
 
 .cta__btn
 {
+  display: inline-block;
   padding: 1em 2em 0.8em;
   border: 5px solid $color-main1;
   font-family: $fontstack-main;
   @include rem-size(14px);
   font-weight: 700;
   line-height: 1;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   color: $color-base7;
+
+  transition: all 0.2s linear;
 
   &:hover
   {
     border-color: $color-base3;
-    color: $color-base7;
+    color: $color-base6;
     text-decoration: none;
   }
 }
