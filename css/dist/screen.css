@@ -2025,6 +2025,35 @@ a {
   color: #9D9D9D; }
 
 /* ==================================
+=motto
+================================== */
+.motto {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: "bookmania", Georgia, Times, serif;
+  font-size: 21px;
+  font-size: 1.3125rem;
+  line-height: 1.35;
+  color: #221F1F; }
+  @media all and (min-width: 31.25em) {
+    .motto {
+      margin-left: 5%;
+      margin-right: 5%;
+      text-align: center;
+      font-size: 25px;
+      font-size: 1.5625rem; } }
+  @media all and (min-width: 47.5em) {
+    .motto {
+      font-size: 34px;
+      font-size: 2.125rem;
+      line-height: 1.25; } }
+  @media all and (min-width: 64em) {
+    .motto {
+      font-size: 38px;
+      font-size: 2.375rem; } }
+
+/* ==================================
 =intro
 ================================== */
 .homeintro {
@@ -2051,35 +2080,6 @@ a {
   @media all and (min-width: 47.5em) {
     .homevalues {
       margin-top: 0; } }
-
-/* ==================================
-=motto
-================================== */
-.motto {
-  margin: 0;
-  padding: 0;
-  font-weight: 400;
-  font-family: "bookmania", Georgia, Times, serif;
-  font-size: 21px;
-  font-size: 1.3125rem;
-  line-height: 1.35;
-  color: #221F1F; }
-  @media all and (min-width: 31.25em) {
-    .motto {
-      margin-left: 5%;
-      margin-right: 5%;
-      text-align: center;
-      font-size: 25px;
-      font-size: 1.5625rem; } }
-  @media all and (min-width: 47.5em) {
-    .motto {
-      font-size: 34px;
-      font-size: 2.125rem;
-      line-height: 1.15; } }
-  @media all and (min-width: 64em) {
-    .motto {
-      font-size: 38px;
-      font-size: 2.375rem; } }
 
 /* ==================================
 =teams
