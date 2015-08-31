@@ -1,1 +1,14 @@
-<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><title>bkg_plus</title><g transform="translate(-859 -5114)" fill="none" fill-rule="evenodd"><path fill="#2F2F2F" d="M0 4100.5h1800V5722H0z"/><ellipse stroke="#4A4A4A" stroke-width="10" cx="899" cy="5154" rx="35" ry="35"/><path d="M902 5141h-7v10h-10v7h10v10h7v-10h10v-7h-10v-10z" fill="#4A4A4A"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>bkg_plus</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="tramway_hpv3" sketch:type="MSArtboardGroup" transform="translate(-859.000000, -5114.000000)">
+            <rect id="Rectangle-1-Copy-2" fill="#2F2F2F" sketch:type="MSShapeGroup" x="0" y="4100.5" width="1800" height="1621.5"></rect>
+            <ellipse id="Oval-2-Copy" stroke="#9D9D9D" stroke-width="10" sketch:type="MSShapeGroup" cx="899" cy="5154" rx="35" ry="35"></ellipse>
+            <path d="M902,5141 L895,5141 L895,5151 L885,5151 L885,5158 L895,5158 L895,5168 L902,5168 L902,5158 L912,5158 L912,5151 L902,5151 L902,5141 Z" id="Rectangle-33" fill="#9D9D9D" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
