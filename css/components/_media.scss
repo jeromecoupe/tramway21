@@ -39,6 +39,11 @@
   background-size: cover;
   z-index: 10;
 
+  @include mq(small)
+  {
+    height: 350px;
+  }
+
   @include mq(medium)
   {
     height: 400px;
