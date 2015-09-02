@@ -29,19 +29,13 @@
   */
   .container--overlay
   {
-    padding-top: 60px;
-    margin-top: -120px;
+    padding-top: 0;
+    margin-top: 0;
     z-index: 50;
 
-    @include mq(medium)
+    @include mq(xlarge)
     {
-      padding-top: 80px;
-      margin-top: calc-em(-160px);
-    }
-
-    @include mq(large)
-    {
-      padding-top: 100px;
+      padding-top: 120px;
       margin-top: calc-em(-180px);
     }
   }
