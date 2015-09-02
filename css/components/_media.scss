@@ -32,7 +32,7 @@
 
 .fullwidthimg
 {
-  height: 250px;
+  height: 200px;
   background-color: $color-base3;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -66,6 +66,7 @@
 
   @include mq(small)
   {
+    background-position: 50% 40%;
     background-image: url(../../img/homeintro_800.jpg);
   }
 
@@ -83,6 +84,7 @@
 .fullwidthimg--hometeam
 {
   background-image: url(../../img/hometeam_600.jpg);
+  background-position: 50% 0;
 
   @include mq(small)
   {

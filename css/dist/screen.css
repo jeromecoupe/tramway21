@@ -1495,7 +1495,7 @@ body {
 .siteheader {
   padding-top: 1.25em;
   padding-bottom: 1.25em;
-  border-bottom: 1px solid #E5E5E5; }
+  border-bottom: 1px solid #F8F8F8; }
   @media all and (min-width: 47.5em) {
     .siteheader {
       padding-top: 2.5em;
@@ -1621,16 +1621,12 @@ a {
    * Variant when needs to overlay a picture / previous block
   */
 .container--overlay {
-  padding-top: 60px;
-  margin-top: -120px;
+  padding-top: 0;
+  margin-top: 0;
   z-index: 50; }
-  @media all and (min-width: 47.5em) {
+  @media all and (min-width: 71.25em) {
     .container--overlay {
-      padding-top: 80px;
-      margin-top: -10em; } }
-  @media all and (min-width: 64em) {
-    .container--overlay {
-      padding-top: 100px;
+      padding-top: 120px;
       margin-top: -11.25em; } }
 
 .container--highlight {
@@ -1833,7 +1829,7 @@ a:hover {
 =full width images
 ================================== */
 .fullwidthimg {
-  height: 250px;
+  height: 200px;
   background-color: #E5E5E5;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -1856,6 +1852,7 @@ a:hover {
   background-image: url(../../img/homeintro_600.jpg); }
   @media all and (min-width: 31.25em) {
     .fullwidthimg--homeintro {
+      background-position: 50% 40%;
       background-image: url(../../img/homeintro_800.jpg); } }
   @media all and (min-width: 64em) {
     .fullwidthimg--homeintro {
@@ -1865,7 +1862,8 @@ a:hover {
       background-image: url(../../img/homeintro_1500.jpg); } }
 
 .fullwidthimg--hometeam {
-  background-image: url(../../img/hometeam_600.jpg); }
+  background-image: url(../../img/hometeam_600.jpg);
+  background-position: 50% 0; }
   @media all and (min-width: 31.25em) {
     .fullwidthimg--hometeam {
       background-image: url(../../img/hometeam_800.jpg); } }
